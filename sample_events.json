@@ -1,0 +1,25 @@
+[
+  {
+    "event_id": "test-uuid-1",
+    "event_time": "2026-10-20T10:35:12Z",
+    "event_name": "AuthorizeSecurityGroupIngress",
+    "actor": {"type": "IAMUser", "name": "ahmed", "arn": "arn:aws:iam::123456789012:user/ahmed"},
+    "source_ip": "192.168.1.5",
+    "region": "us-east-1",
+    "resource": {"type": "AWS::EC2::SecurityGroup", "id": "sg-0abc"},
+    "request_parameters": {
+      "ipPermissions": {
+        "items": [
+          {
+            "ipProtocol": "tcp",
+            "fromPort": 22,
+            "toPort": 22,
+            "ipRanges": [{"cidrIp": "0.0.0.0/0"}]
+          }
+        ]
+      }
+    },
+    "change_type": null,
+    "severity": null
+  }
+]
